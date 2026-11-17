@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">STAY ORGANIZED</p>
+                <h1>My Tasks <span>✦</span></h1>
+                <p class="subtitle">Plan your day, one task at a time.</p>
+            </div>
+            <div class="date-box">
+                <span id="currentDate"></span>
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total Tasks</span>
+                <h2 id="totalTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Active</span>
+                <h2 id="activeTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Completed</span>
+                <h2 id="completedTasks">0</h2>
+            </div>
+        </section>
+
+        <section class="task-section">
+
+            <h2>Add a New Task</h2>
+
+            <form id="taskForm" class="task-form">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    maxlength="120"
+                    required
+                >
+                <button type="submit" id="submitButton">+ Add Task</button>
+            </form>
+
+            <div class="task-toolbar">
+                <h2>Your To-Do List</h2>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks here yet. Add your first task!
+            </p>
+
+            <button id="clearCompleted" class="clear-btn">
+                Clear Completed Tasks
+            </button>
+
+        </section>
+
+        <footer>
+            <p>Made with 💜 | My Personal Task Manager</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
